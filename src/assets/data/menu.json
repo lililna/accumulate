@@ -1,0 +1,43 @@
+[
+    {
+        "name":"登录页",
+        "isLeaf": false,
+        "icon": "",
+        "children": [
+            {
+                "name": "首页",
+                "url": "/welcome",
+                "openNew": false
+            },
+            {
+                "name": "登录页1",
+                "url": "/app",
+                "openNew": true
+            },
+            {
+                "name": "登录页2",
+                "url": "/ap",
+                "openNew": true
+            }
+            
+        ]
+        },
+        {
+        "name":"静态页",
+        "isLeaf": false,
+        "icon": "",
+        "children": [
+            {
+                "name": "静态页1",
+                "url": "/a1",
+                "openNew": false
+            },
+            {
+                "name": "静态页2",
+                "url": "/a2",
+                "openNew": false
+            }
+            
+        ]
+        }
+]

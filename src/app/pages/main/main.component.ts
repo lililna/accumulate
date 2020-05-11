@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from './services/app.service';
 import { Router } from '@angular/router';
+import { AppService } from 'src/app/services/app.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.less']
 })
-export class AppComponent implements OnInit {
+export class MainComponent implements OnInit {
   isCollapsed = false;
   menuList = [];
   constructor(private service: AppService,

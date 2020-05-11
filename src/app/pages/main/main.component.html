@@ -1,0 +1,50 @@
+<nz-layout class="app-layout">
+    <nz-sider class="menu-sidebar"
+              nzCollapsible
+              nzWidth="256px"
+              nzBreakpoint="md"
+              [(nzCollapsed)]="isCollapsed"
+              [nzTrigger]="null">
+      <div class="sidebar-logo">
+        <a routerLink="/home/home1">
+          <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+          <h1>页面demo</h1>
+        </a>
+      </div>
+      <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+        <li nz-submenu nzOpen *ngFor="let item of menuList" [nzTitle]="item.name" nzIcon="dashboard">
+          <ul>
+            <li *ngFor="let it of item.children" nz-menu-item nzMatchRouter>
+              <a *ngIf="it.openNew" routerLinkActive="router-link-active"  [routerLink]="it.url" target="_blank">{{it.name}}</a>
+              <a *ngIf="!it.openNew"  routerLinkActive="router-link-active"  [routerLink]="it.url">{{it.name}}</a>
+            </li>
+          </ul>
+        </li>
+       <!--  <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">
+          <ul>
+            <li nz-menu-item nzMatchRouter>
+              <a>Basic Form</a>
+            </li>
+          </ul>
+        </li> -->
+      </ul>
+    </nz-sider>
+    <nz-layout>
+      <nz-header>
+        <div class="app-header">
+          <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+              <i class="trigger"
+                 nz-icon
+                 [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+              ></i>
+          </span>
+        </div>
+      </nz-header>
+      <nz-content>
+        <div class="inner-content">
+          <router-outlet></router-outlet> 
+        </div>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+  

@@ -5,18 +5,18 @@
         "icon": "",
         "children": [
             {
-                "name": "首页",
-                "url": "/welcome",
+                "name": "登录页1",
+                "url": "/login/login1",
                 "openNew": false
             },
             {
-                "name": "登录页1",
-                "url": "/app",
+                "name": "登录页2",
+                "url": "/login/login2",
                 "openNew": true
             },
             {
-                "name": "登录页2",
-                "url": "/ap",
+                "name": "登录页3",
+                "url": "/login/login3",
                 "openNew": true
             }
             

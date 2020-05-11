@@ -14,7 +14,10 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData, CommonModule } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { AppService } from './services/app.service';
-import { NgZorroAntdModule } from "ng-zorro-antd";
+import { NgZorroAntdModule, NzFormModule } from "ng-zorro-antd";
+import { HomeModule } from './pages/home/home.module';
+import { LoginModule } from './pages/login/login.module';
+import { MainModule } from './pages/main/main.module';
 
 registerLocaleData(en);
 
@@ -28,11 +31,14 @@ registerLocaleData(en);
     IconsProviderModule,
     NzLayoutModule,
     NzMenuModule,
-    FormsModule,
+    NzFormModule,
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    HomeModule,
+    LoginModule,
+    MainModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },
